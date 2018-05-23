@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Package : Redbox
+ * Module  : CustomerLinkedinProfile
+ * File    : Redbox\CustomerLinkedinProfile\etc\module.xml
+ * Date    : 18-05-2018
+ * Copyright : Copyright (c) 2018
+ * @Author  : Dev-2
+ * @Company : Redbox
+ */
+-->
+<config  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/Module/etc/module.xsd">
+    <module name="Redbox_CustomerLinkedinProfile"  setup_version="2.0.0">
+        <sequence>
+            <module name="Magento_Customer"/>
+        </sequence>
+    </module>
+</config>

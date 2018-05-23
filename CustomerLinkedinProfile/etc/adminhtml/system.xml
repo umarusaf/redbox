@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Location: magento2_root/app/code/Vendorname/Extensionname/etc/adminhtml/system.xml
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="redbox_tab" translate="label" sortOrder="1000">
+            <label>Redbox</label>
+        </tab>
+        <section id="redboxsection" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Customer</label>
+            <tab>redbox_tab</tab>
+            <resource>Redbox_CustomerLinkedinProfile::config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="linkedin_profile_status" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Customer LinkedIn Profile Status</label>
+                    <source_model>Redbox\CustomerLinkedinProfile\Model\Config\Custom</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

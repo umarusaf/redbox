@@ -1,0 +1,28 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/** @var \Magento\Customer\Block\Form\Register $block */
+$val = $block->getValidation();
+if($val){
+?>
+
+<fieldset class="fieldset create account" data-hasrequired="<?php /* @escapeNotVerified */ echo __('* Required Fields') ?>">
+    <legend class="legend"><span><?php /* @escapeNotVerified */ echo __('Additional Information') ?></span></legend>
+    <div class="field linkedin_profile <?php if($val == 'true'){echo 'required';}?>">
+        <label for="linkedin_profile" class="label"><span><?php /* @escapeNotVerified */ echo __('Linkedin Profile URL') ?></span></label>
+        <div class="control">
+            <input type="text"
+                   name="linkedin_profile"
+                   id="linkedin_profile"
+                   title="<?php /* @escapeNotVerified */ echo __('Linkedin Profile URL') ?>"
+                   value=""
+                   class="input-text validate-length maximum-length-250"
+                   data-validate="{required:<?php echo $block->getValidation()?>, 'validate-url':true, 'maxlength':250}"
+                   autocomplete="off" />
+        </div>
+    </div>
+</fieldset>
+<?php } ?>
